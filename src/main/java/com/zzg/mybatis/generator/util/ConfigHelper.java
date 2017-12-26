@@ -237,9 +237,10 @@ public class ConfigHelper {
 			}
 			System.out.println(file.getCanonicalPath());
 			File[] jarFiles = file.listFiles();
-			System.out.println("jarFiles:" + jarFiles);
+
 			if (jarFiles != null && jarFiles.length > 0) {
 				for (File jarFile : jarFiles) {
+					System.out.println("jarFiles:" + jarFile.getAbsolutePath());
 					if (jarFile.isFile() && jarFile.getAbsolutePath().endsWith(".jar")) {
 						jarFilePathList.add(jarFile.getAbsolutePath());
 					}
